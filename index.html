@@ -138,6 +138,7 @@ a.fx:hover .add span{border-color:var(--gold);color:var(--gold);background:rgba(
 .fx.tbc .opp,.fx.bye .opp{color:var(--mute-dim);font-size:16px}
 .fx.tbc .tm,.fx.bye .tm{color:var(--mute-dim);font-size:13px}
 .fx.next{background:linear-gradient(90deg,rgba(232,178,58,.08),transparent 62%)}
+.fx .meta-row{display:none}
 .split{display:flex;align-items:center;gap:14px;margin:20px 0 10px}
 .split span{font-size:10px;font-weight:900;letter-spacing:.34em;color:var(--gold)}
 .split::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--gold-dim),transparent)}
@@ -157,18 +158,51 @@ footer{margin-top:64px;padding-top:26px;border-top:1px solid var(--line);
 footer b{color:var(--mute)}
 footer a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-dim)}
 
-@media (max-width:640px){
-  .fx{grid-template-columns:minmax(0,1fr) 30px 74px 26px;gap:9px;padding-left:12px;
-      grid-template-areas:"rnd rnd dt dt" "opp ha tm add"}
-  .add{grid-area:add}
-  .fx .rnd{grid-area:rnd}
-  .fx .dt{grid-area:dt;align-items:flex-end}
-  .fx .opp{grid-area:opp}
-  .fx .ha{grid-area:ha}
-  .fx .tm{grid-area:tm}
-  .fx .dt{flex-direction:row;gap:7px;align-items:baseline}
-  .fx .dt span{margin-top:0}
-  .nextup{grid-template-columns:1fr;gap:8px}
+@media (max-width:700px){
+  .wrap{padding-inline:16px}
+  .switch-in{padding-inline:16px}
+  header.top{padding-block:28px 20px}
+  .club{font-size:11px;letter-spacing:.34em}
+  .eyebrow{margin-top:14px;font-size:10px}
+  .lede{margin-top:16px;font-size:14.5px}
+  .div-panel{padding-block:38px 4px}
+  .switch a{padding:13px 12px;font-size:11px;letter-spacing:.12em}
+
+  /* Two tiers per fixture: the matchup on top, the details beneath. */
+  .fx{
+    grid-template-columns:minmax(0,1fr) auto;
+    grid-template-areas:"rnd add" "opp opp" "meta meta";
+    gap:6px 10px;padding:14px 0 14px 12px;align-items:center;
+  }
+  .fx .rnd{grid-area:rnd;font-size:10px}
+  .add{grid-area:add;align-self:start}
+  .fx .opp{grid-area:opp;font-size:22px;white-space:normal;flex-wrap:wrap;align-items:center}
+  .fx .opp i{font-size:13px}
+  .fx.tbc .opp,.fx.bye .opp{font-size:19px}
+  .fx .sub{margin-top:0}
+
+  /* date · time · court · H/A collapse into one readable line */
+  .fx .dt,.fx .tm,.fx .ha{grid-area:meta;display:inline-flex}
+  .fx .meta-row{grid-area:meta;display:flex;flex-wrap:wrap;align-items:center;gap:8px;
+    font-family:var(--mono);font-size:12.5px;color:var(--mute);font-variant-numeric:tabular-nums}
+  .fx .meta-row b{color:var(--gold);font-weight:600}
+  .fx .meta-row s{text-decoration:none;color:var(--bone)}
+  .fx .meta-row em{font-style:normal;font-size:10px;font-weight:900;font-family:var(--disp);
+    padding:3px 6px;border-radius:3px;line-height:1}
+  .fx .meta-row em.h{background:var(--red);color:#fff}
+  .fx .meta-row em.a{background:#161618;color:var(--mute);border:1px solid var(--line)}
+  .fx .dt,.fx .tm,.fx .ha{display:none}
+
+  .add span{width:30px;height:30px;font-size:17px}
+  .nextup{grid-template-columns:1fr;gap:7px;padding:15px 16px}
+  .nextup .what{font-size:16px}
+  .acts{gap:8px}
+  .btn{padding:13px 15px;font-size:12.5px;flex:1 1 auto;justify-content:center}
+  .share pre{font-size:12px}
+}
+@media (max-width:380px){
+  .fx .opp{font-size:19.5px}
+  .btn{flex-basis:100%}
 }
 </style>
 
@@ -246,6 +280,8 @@ const DIR = location.href.split("#")[0].split("?")[0]
 
 /* Feeds sit next to this page when it's self-hosted, so the URLs follow the
    domain automatically. The Claude-hosted copy points at GitHub Pages. */
+/* Admin-only extras (the ready-to-paste group messages) — add ?admin to the URL. */
+const ADMIN = /(^|[?&])admin(=|&|$)/.test(location.search);
 const SELF_HOSTED = /(^|\.)github\.io$|(^|\.)controllersbasketball\.com$/.test(location.hostname);
 const FEED_BASE = SELF_HOSTED ? DIR : "https://gityuvs.github.io/controllers-fixtures";
 const feedHttps = k => FEED_BASE ? `${FEED_BASE}/controllers-${k}.ics` : null;
@@ -285,10 +321,13 @@ function fxRow(div, rd, isNext){
   const rn = `<div class="rnd">${esc(rd.r).toUpperCase()}</div>`;
   const note = rd.note ? `<div class="sub">${esc(rd.note)}</div>` : "";
 
+  const meta = inner => `<span class="meta-row"><b>${day} ${date}</b>${inner}</span>`;
+
   if (rd.bye) return `<div class="${cls}">${rn}${dt}
     <div><div class="opp"><u>Bye week</u></div>
     <div class="sub">${rd.note ? esc(rd.note) + " · " : ""}No Controllers game</div></div>
-    <div class="ha"></div><div class="tm">&mdash;</div><div class="add"></div></div>`;
+    <div class="ha"></div><div class="tm">&mdash;</div><div class="add"></div>
+    ${meta(" · No game")}</div>`;
 
   const add = `<div class="add"><span aria-hidden="true">+</span></div>`;
   const href = gcal(div, rd);
@@ -297,14 +336,16 @@ function fxRow(div, rd, isNext){
     aria-label="Add ${esc(rd.r)} to calendar">${rn}${dt}
     <div><div class="opp"><u>TBC</u></div>
     <div class="sub">${rd.note ? esc(rd.note) + " · " : ""}Set by standings</div></div>
-    <div class="ha"></div><div class="tm">TBC</div>${add}</a>`;
+    <div class="ha"></div><div class="tm">TBC</div>${add}
+    ${meta(" · Time TBC")}</a>`;
 
   const home = rd.ha === "H";
   return `<a class="${cls}" href="${href}" target="_blank" rel="noopener"
     aria-label="Add ${esc(rd.r)} versus ${esc(rd.opp)} to calendar">${rn}${dt}
     <div><div class="opp"><i>${home ? "VS" : "@"}</i><u>${esc(rd.opp)}</u></div>${note}</div>
     <div class="ha"><em class="${home ? "h" : "a"}">${rd.ha}</em></div>
-    <div class="tm">${rd.time}<span>${esc(rd.court).toUpperCase()}</span></div>${add}</a>`;
+    <div class="tm">${rd.time}<span>${esc(rd.court).toUpperCase()}</span></div>${add}
+    ${meta(` · <s>${rd.time}</s> · ${esc(rd.court).toUpperCase()} <em class="${home ? "h" : "a"}">${rd.ha}</em>`)}</a>`;
 }
 
 function nextGame(div){
@@ -374,11 +415,11 @@ function panelHtml(div){
     Every entry carries the court, the tip-off and <b>which kit to bring</b>.
     Open this page in Safari or Chrome; subscribe links don&rsquo;t fire inside WhatsApp&rsquo;s built-in browser.</p>
     <div class="fixtures">${rows.join("")}</div>
-    <div class="share">
+    ${ADMIN ? `<div class="share">
       <h3>MESSAGE FOR THE ${esc(div.label)} GROUP</h3>
       <pre id="msg-${div.key}">${esc(shareText(div))}</pre>
-      <button class="btn" type="button" data-copy-el="msg-${div.key}" id="copymsg-${div.key}"><span class="dot"></span>Copy message</button>
-    </div>
+      <button class="btn" type="button" data-copy-el="msg-${div.key}"><span class="dot"></span>Copy message</button>
+    </div>` : ""}
   </section>`;
 }
 
