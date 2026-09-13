@@ -99,7 +99,7 @@ h2{font-size:clamp(30px,7.5vw,52px);line-height:.94;font-weight:900;
 /* ---------- fixtures ---------- */
 .fixtures{margin-top:26px;border-top:1px solid var(--line)}
 .fx{
-  display:grid;grid-template-columns:106px 92px minmax(0,1fr) 34px 96px 34px;
+  display:grid;grid-template-columns:106px 92px minmax(0,1fr) 62px 96px 34px;
   align-items:center;gap:12px;padding:15px 0 15px 14px;
   border-bottom:1px solid var(--line-soft);position:relative;
   color:inherit;text-decoration:none;transition:background .14s;
@@ -107,11 +107,12 @@ h2{font-size:clamp(30px,7.5vw,52px);line-height:.94;font-weight:900;
 a.fx:hover{background:#0D0D0F}
 .add{display:flex;justify-content:flex-end}
 .add span{
-  display:flex;align-items:center;justify-content:center;width:26px;height:26px;
-  border:1px solid var(--line);border-radius:50%;color:var(--mute);
-  font-size:15px;font-weight:700;line-height:1;transition:border-color .14s,color .14s,background .14s;
+  display:flex;align-items:center;justify-content:center;gap:5px;width:28px;height:28px;
+  border:1px solid var(--gold-dim);border-radius:50%;color:var(--gold);
+  font-size:16px;font-weight:700;line-height:1;transition:border-color .14s,color .14s,background .14s;
 }
-a.fx:hover .add span{border-color:var(--gold);color:var(--gold);background:rgba(232,178,58,.1)}
+.add span em{display:none}
+a.fx:hover .add span{border-color:var(--gold);background:rgba(232,178,58,.16)}
 .fx::before{content:"";position:absolute;left:0;top:11px;bottom:11px;width:3px;background:var(--red)}
 .fx.tbc::before{background:#2C2C2E}
 .fx.bye::before{background:#1C1C1E}
@@ -130,7 +131,7 @@ a.fx:hover .add span{border-color:var(--gold);color:var(--gold);background:rgba(
 .fx .ha{display:flex;justify-content:center}
 .fx .ha em{font-style:normal;font-size:10px;font-weight:900;padding:4px 7px;border-radius:3px;line-height:1}
 .ha em.h{background:var(--red);color:#fff}
-.ha em.a{background:#161618;color:var(--mute);border:1px solid var(--line)}
+.ha em.a{background:#0A0A0B;color:#D8D6D2;border:1px solid #3A3A3D}
 .fx .tm{text-align:right;font-family:var(--mono);font-size:16px;font-weight:600;
   color:var(--bone);font-variant-numeric:tabular-nums;line-height:1.15}
 .fx .tm span{display:block;margin-top:4px;font-family:var(--disp);font-size:10px;
@@ -168,32 +169,41 @@ footer a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--go
   .div-panel{padding-block:38px 4px}
   .switch a{padding:13px 12px;font-size:11px;letter-spacing:.12em}
 
-  /* Two tiers per fixture: the matchup on top, the details beneath. */
+  /* Matchup first, details beneath, a labelled Add control on its own row. */
   .fx{
-    grid-template-columns:minmax(0,1fr) auto;
-    grid-template-areas:"rnd add" "opp opp" "meta meta";
-    gap:6px 10px;padding:14px 0 14px 12px;align-items:center;
+    grid-template-columns:minmax(0,1fr);
+    grid-template-areas:"rnd" "opp" "meta" "add";
+    gap:7px 0;padding:16px 0 18px 13px;align-items:start;
   }
-  .fx .rnd{grid-area:rnd;font-size:10px}
-  .add{grid-area:add;align-self:start}
-  .fx .opp{grid-area:opp;font-size:22px;white-space:normal;flex-wrap:wrap;align-items:center}
-  .fx .opp i{font-size:13px}
-  .fx.tbc .opp,.fx.bye .opp{font-size:19px}
-  .fx .sub{margin-top:0}
+  .fx .rnd{grid-area:rnd;font-size:11px;letter-spacing:.13em}
+  .fx .opp{grid-area:opp;font-size:25px;white-space:normal;flex-wrap:wrap;align-items:baseline;
+    line-height:1.12;letter-spacing:-.01em}
+  .fx .opp i{font-size:14px}
+  .fx.tbc .opp,.fx.bye .opp{font-size:21px}
+  .fx .sub{margin-top:0;font-size:12px}
 
-  /* date · time · court · H/A collapse into one readable line */
-  .fx .dt,.fx .tm,.fx .ha{grid-area:meta;display:inline-flex}
-  .fx .meta-row{grid-area:meta;display:flex;flex-wrap:wrap;align-items:center;gap:8px;
-    font-family:var(--mono);font-size:12.5px;color:var(--mute);font-variant-numeric:tabular-nums}
+  /* date · time · court · kit collapse into one readable line */
+  .fx .meta-row{grid-area:meta;display:flex;flex-wrap:wrap;align-items:center;gap:9px;
+    font-family:var(--mono);font-size:14px;color:var(--bone);font-variant-numeric:tabular-nums}
   .fx .meta-row b{color:var(--gold);font-weight:600}
   .fx .meta-row s{text-decoration:none;color:var(--bone)}
-  .fx .meta-row em{font-style:normal;font-size:10px;font-weight:900;font-family:var(--disp);
-    padding:3px 6px;border-radius:3px;line-height:1}
+  .fx .meta-row em{font-style:normal;font-size:11px;font-weight:900;font-family:var(--disp);
+    padding:4px 7px;border-radius:3px;line-height:1;letter-spacing:.04em}
   .fx .meta-row em.h{background:var(--red);color:#fff}
-  .fx .meta-row em.a{background:#161618;color:var(--mute);border:1px solid var(--line)}
+  .fx .meta-row em.a{background:#0A0A0B;color:#D8D6D2;border:1px solid #3A3A3D}
+  .fx.tbc .meta-row,.fx.bye .meta-row{color:var(--mute)}
   .fx .dt,.fx .tm,.fx .ha{display:none}
 
-  .add span{width:30px;height:30px;font-size:17px}
+  /* the add-to-calendar control becomes an explicit, full-width button */
+  .add{grid-area:add;justify-content:stretch;margin-top:3px}
+  .add span{
+    width:100%;height:auto;border-radius:7px;padding:11px 12px;gap:7px;
+    border-color:var(--gold-dim);background:rgba(232,178,58,.09);
+    font-size:15px;font-weight:800;
+  }
+  .add span em{display:inline;font-style:normal;font-size:12px;font-weight:800;
+    letter-spacing:.14em;text-transform:uppercase}
+  .fx.bye .add{display:none}
   .nextup{grid-template-columns:1fr;gap:7px;padding:15px 16px}
   .nextup .what{font-size:16px}
   .acts{gap:8px}
@@ -296,10 +306,10 @@ function gcal(div, rd){
   const home = rd.ha === "H";
   const title = rd.tbc
     ? `${div.label}: ${rd.r} — TBC`
-    : `${div.label}: ${home ? "vs" : "@"} ${rd.opp}`;
+    : `${div.label}: vs ${rd.opp}`;
   const details = rd.tbc
     ? `${div.team} · ${rd.r}\nOpponent, tip-off and court depend on standings — evening blocked.`
-    : `${div.team} ${home ? "vs" : "@"} ${rd.opp}\n${rd.r} · ${rd.court} · tip-off ${rd.time}\nBring your ${home ? "HOME" : "AWAY"} kit. On court 20 minutes before tip-off.`;
+    : `${div.team} vs ${rd.opp}\n${rd.r} · ${rd.court} · tip-off ${rd.time}\nBring your ${home ? "HOME" : "AWAY"} kit. On court 20 minutes before tip-off.`;
   const loc = rd.tbc ? VENUE : `${VENUE} — ${rd.court}`;
   return "https://calendar.google.com/calendar/render?action=TEMPLATE"
     + `&text=${encodeURIComponent(title)}`
@@ -329,7 +339,7 @@ function fxRow(div, rd, isNext){
     <div class="ha"></div><div class="tm">&mdash;</div><div class="add"></div>
     ${meta(" · No game")}</div>`;
 
-  const add = `<div class="add"><span aria-hidden="true">+</span></div>`;
+  const add = `<div class="add"><span aria-hidden="true">+<em>Add</em></span></div>`;
   const href = gcal(div, rd);
 
   if (rd.tbc) return `<a class="${cls}" href="${href}" target="_blank" rel="noopener"
@@ -342,10 +352,10 @@ function fxRow(div, rd, isNext){
   const home = rd.ha === "H";
   return `<a class="${cls}" href="${href}" target="_blank" rel="noopener"
     aria-label="Add ${esc(rd.r)} versus ${esc(rd.opp)} to calendar">${rn}${dt}
-    <div><div class="opp"><i>${home ? "VS" : "@"}</i><u>${esc(rd.opp)}</u></div>${note}</div>
-    <div class="ha"><em class="${home ? "h" : "a"}">${rd.ha}</em></div>
+    <div><div class="opp"><i>VS</i><u>${esc(rd.opp)}</u></div>${note}</div>
+    <div class="ha"><em class="${home ? "h" : "a"}">${home ? "RED" : "BLACK"}</em></div>
     <div class="tm">${rd.time}<span>${esc(rd.court).toUpperCase()}</span></div>${add}
-    ${meta(` · <s>${rd.time}</s> · ${esc(rd.court).toUpperCase()} <em class="${home ? "h" : "a"}">${rd.ha}</em>`)}</a>`;
+    ${meta(` · <s>${rd.time}</s> · ${esc(rd.court).toUpperCase()} <em class="${home ? "h" : "a"}">${home ? "RED" : "BLACK"}</em>`)}</a>`;
 }
 
 function nextGame(div){
@@ -363,14 +373,14 @@ function nextUpHtml(div){
   const when = `${DAYS[new Date(n.date+"T12:00:00+04:00").getUTCDay()]} ${String(d.getDate()).padStart(2,"0")} ${MON[d.getMonth()]} · ${rel}`;
   const what = n.tbc
     ? `${esc(n.r)} — <span>opponent and tip-off still to be confirmed</span>`
-    : `${n.ha === "H" ? "vs" : "away to"} <b>${esc(n.opp)}</b> <span>· ${n.time} · ${esc(n.court)} · ${n.ha === "H" ? "home" : "away"} kit</span>`;
+    : `vs <b>${esc(n.opp)}</b> <span>· ${n.time} · ${esc(n.court)} · ${n.ha === "H" ? "RED" : "BLACK"} kit</span>`;
   return `<div class="nextup"><div class="when">Next up · ${when}</div><div class="what">${what}</div></div>`;
 }
 
 function shareText(div){
   const n = nextGame(div);
   const first = n && !n.tbc
-    ? `First up: ${n.ha === "H" ? "vs" : "@"} ${n.opp}, ${n.time} on ${n.court}.`
+    ? `First up: vs ${n.opp}, ${n.time} on ${n.court}.`
     : `Next round: ${n ? n.r : "TBC"}.`;
   return `🏀 CONTROLLERS — BAA Season 3 (${div.label})
 ${div.day}, ${VENUE}.
@@ -411,8 +421,9 @@ function panelHtml(div){
       <a class="btn${sub ? "" : " primary"}" href="${gcal(div, nextGame(div) || div.rounds[0])}" target="_blank" rel="noopener"><span class="dot"></span>Add the next game</a>
     </div>
     <p class="note">Subscribe once and you are done for the season &mdash; when BAA moves a game or names a
-    playoff opponent, it <b>changes in your calendar on its own</b>. Or tap any row below to add just that game.
+    playoff opponent, it <b>changes in your calendar on its own</b>. Or hit <b>+ Add</b> on any single game below.
     Every entry carries the court, the tip-off and <b>which kit to bring</b>.
+    Every game is at All Sports Arena &mdash; the badge tells you <b>which kit to wear, red or black</b>.
     Open this page in Safari or Chrome; subscribe links don&rsquo;t fire inside WhatsApp&rsquo;s built-in browser.</p>
     <div class="fixtures">${rows.join("")}</div>
     ${ADMIN ? `<div class="share">

@@ -21,34 +21,14 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:controllers-baa-s3-elite-round-1@controllersbasketball.com
-DTSTAMP:20260913T125525Z
-SEQUENCE:0
+DTSTAMP:20260913T174414Z
+SEQUENCE:1
 DTSTART;TZID=Asia/Dubai:20260915T210000
 DTEND;TZID=Asia/Dubai:20260915T221500
-SUMMARY:Men Elite: @ Ballers All Star (Crt 1)
+SUMMARY:Men Elite: vs Ballers All Star (BLACK kit)
 LOCATION:All Sports Arena\, Al Quoz\, Dubai — Crt 1
-DESCRIPTION:CONTROLLERS @ Ballers All Star\nRound 1 · Crt 1 · tip-off 2
- 1:00\nBring your AWAY kit.\nBe on court 20 minutes before tip-off.\n\nFu
- ll schedule: https://www.ballaboveallsports.com/PreviewSeasonGames?SID=7
- 588
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT3H
-DESCRIPTION:Men Elite: @ Ballers All Star (Crt 1)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:controllers-baa-s3-elite-round-2@controllersbasketball.com
-DTSTAMP:20260913T125525Z
-SEQUENCE:0
-DTSTART;TZID=Asia/Dubai:20260922T210000
-DTEND;TZID=Asia/Dubai:20260922T221500
-SUMMARY:Men Elite: @ Dubai Hoops Elite (Crt 2)
-LOCATION:All Sports Arena\, Al Quoz\, Dubai — Crt 2
-DESCRIPTION:CONTROLLERS @ Dubai Hoops Elite\nRound 2 · Crt 2 · tip-off 
- 21:00\nBring your AWAY kit.\nBe on court 20 minutes before tip-off.\n\nF
+DESCRIPTION:CONTROLLERS vs Ballers All Star\nRound 1 · Crt 1 · tip-off 
+ 21:00\nWEAR YOUR BLACK KIT.\nBe on court 20 minutes before tip-off.\n\nF
  ull schedule: https://www.ballaboveallsports.com/PreviewSeasonGames?SID=
  7588
 STATUS:CONFIRMED
@@ -56,72 +36,92 @@ TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT3H
-DESCRIPTION:Men Elite: @ Dubai Hoops Elite (Crt 2)
+DESCRIPTION:Men Elite: vs Ballers All Star (BLACK kit)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:controllers-baa-s3-elite-round-2@controllersbasketball.com
+DTSTAMP:20260913T174414Z
+SEQUENCE:1
+DTSTART;TZID=Asia/Dubai:20260922T210000
+DTEND;TZID=Asia/Dubai:20260922T221500
+SUMMARY:Men Elite: vs Dubai Hoops Elite (BLACK kit)
+LOCATION:All Sports Arena\, Al Quoz\, Dubai — Crt 2
+DESCRIPTION:CONTROLLERS vs Dubai Hoops Elite\nRound 2 · Crt 2 · tip-off
+  21:00\nWEAR YOUR BLACK KIT.\nBe on court 20 minutes before tip-off.\n\n
+ Full schedule: https://www.ballaboveallsports.com/PreviewSeasonGames?SID
+ =7588
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Men Elite: vs Dubai Hoops Elite (BLACK kit)
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:controllers-baa-s3-elite-round-3@controllersbasketball.com
-DTSTAMP:20260913T125525Z
-SEQUENCE:0
+DTSTAMP:20260913T174414Z
+SEQUENCE:1
 DTSTART;TZID=Asia/Dubai:20260929T221500
 DTEND;TZID=Asia/Dubai:20260929T233000
-SUMMARY:Men Elite: @ Pure Basketball Elite (Crt 1)
+SUMMARY:Men Elite: vs Pure Basketball (BLACK kit)
 LOCATION:All Sports Arena\, Al Quoz\, Dubai — Crt 1
-DESCRIPTION:CONTROLLERS @ Pure Basketball Elite\nRound 3 · Crt 1 · tip-
- off 22:15\nBring your AWAY kit.\nBe on court 20 minutes before tip-off.\
- n\nFull schedule: https://www.ballaboveallsports.com/PreviewSeasonGames?
- SID=7588
+DESCRIPTION:CONTROLLERS vs Pure Basketball\nRound 3 · Crt 1 · tip-off 2
+ 2:15\nWEAR YOUR BLACK KIT.\nBe on court 20 minutes before tip-off.\n\nFu
+ ll schedule: https://www.ballaboveallsports.com/PreviewSeasonGames?SID=7
+ 588
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT3H
-DESCRIPTION:Men Elite: @ Pure Basketball Elite (Crt 1)
+DESCRIPTION:Men Elite: vs Pure Basketball (BLACK kit)
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:controllers-baa-s3-elite-round-4@controllersbasketball.com
-DTSTAMP:20260913T125525Z
-SEQUENCE:0
+DTSTAMP:20260913T174414Z
+SEQUENCE:1
 DTSTART;TZID=Asia/Dubai:20261006T210000
 DTEND;TZID=Asia/Dubai:20261006T221500
-SUMMARY:Men Elite: vs Al Musbah (Crt 1)
+SUMMARY:Men Elite: vs Al Musbah (RED kit)
 LOCATION:All Sports Arena\, Al Quoz\, Dubai — Crt 1
 DESCRIPTION:CONTROLLERS vs Al Musbah\nRound 4 · Crt 1 · tip-off 21:00\n
- Bring your HOME kit.\nBe on court 20 minutes before tip-off.\n\nFull sch
- edule: https://www.ballaboveallsports.com/PreviewSeasonGames?SID=7588
+ WEAR YOUR RED KIT.\nBe on court 20 minutes before tip-off.\n\nFull sched
+ ule: https://www.ballaboveallsports.com/PreviewSeasonGames?SID=7588
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT3H
-DESCRIPTION:Men Elite: vs Al Musbah (Crt 1)
+DESCRIPTION:Men Elite: vs Al Musbah (RED kit)
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:controllers-baa-s3-elite-round-5@controllersbasketball.com
-DTSTAMP:20260913T125525Z
-SEQUENCE:0
+DTSTAMP:20260913T174414Z
+SEQUENCE:1
 DTSTART;TZID=Asia/Dubai:20261013T210000
 DTEND;TZID=Asia/Dubai:20261013T221500
-SUMMARY:Men Elite: vs TwentyFour Academy (Crt 1)
+SUMMARY:Men Elite: vs TwentyFour Academy (RED kit)
 LOCATION:All Sports Arena\, Al Quoz\, Dubai — Crt 1
 DESCRIPTION:CONTROLLERS vs TwentyFour Academy\nRound 5 · Crt 1 · tip-of
- f 21:00\nBring your HOME kit.\nBe on court 20 minutes before tip-off.\n\
- nFull schedule: https://www.ballaboveallsports.com/PreviewSeasonGames?SI
- D=7588
+ f 21:00\nWEAR YOUR RED KIT.\nBe on court 20 minutes before tip-off.\n\nF
+ ull schedule: https://www.ballaboveallsports.com/PreviewSeasonGames?SID=
+ 7588
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT3H
-DESCRIPTION:Men Elite: vs TwentyFour Academy (Crt 1)
+DESCRIPTION:Men Elite: vs TwentyFour Academy (RED kit)
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:controllers-baa-s3-elite-round-6@controllersbasketball.com
-DTSTAMP:20260913T125525Z
-SEQUENCE:0
+DTSTAMP:20260913T174414Z
+SEQUENCE:1
 DTSTART;TZID=Asia/Dubai:20261020T200000
 DTEND;TZID=Asia/Dubai:20261020T223000
 SUMMARY:Men Elite: Round 6 — TBC
@@ -141,8 +141,8 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:controllers-baa-s3-elite-semi-finals@controllersbasketball.com
-DTSTAMP:20260913T125525Z
-SEQUENCE:0
+DTSTAMP:20260913T174414Z
+SEQUENCE:1
 DTSTART;TZID=Asia/Dubai:20261027T200000
 DTEND;TZID=Asia/Dubai:20261027T223000
 SUMMARY:Men Elite: Semi Finals — TBC
@@ -161,8 +161,8 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:controllers-baa-s3-elite-championship@controllersbasketball.com
-DTSTAMP:20260913T125525Z
-SEQUENCE:0
+DTSTAMP:20260913T174414Z
+SEQUENCE:1
 DTSTART;TZID=Asia/Dubai:20261103T200000
 DTEND;TZID=Asia/Dubai:20261103T223000
 SUMMARY:Men Elite: Championship — TBC
