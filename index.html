@@ -1,0 +1,418 @@
+<title>Controllers Season 3 Fixtures</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+:root{
+  --ink:#000000;
+  --panel:#0B0B0C;
+  --line:#1D1D1F;
+  --line-soft:#151517;
+  --bone:#F4F2EE;
+  --mute:#83817D;
+  --mute-dim:#5A5956;
+  --red:#E8232A;
+  --red-dim:#8E1519;
+  --gold:#E8B23A;
+  --gold-dim:#6B5119;
+  --disp:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,'SF Mono',Menlo,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{
+  background:var(--ink);color:var(--bone);
+  font-family:var(--disp);font-variation-settings:'wdth' 100;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:960px;margin:0 auto;padding-inline:20px;padding-block:0 72px}
+.wrap.head{padding-block:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+
+/* ---------- masthead ---------- */
+.rule{height:3px;background:linear-gradient(90deg,var(--red) 0%,var(--gold) 46%,transparent 100%)}
+header.top{padding-block:40px 26px}
+.club{font-size:13px;font-weight:800;letter-spacing:.42em;color:var(--mute)}
+.eyebrow{margin-top:20px;font-size:11px;font-weight:800;letter-spacing:.3em;color:var(--gold)}
+h1{
+  margin-top:8px;font-size:clamp(40px,10.5vw,82px);line-height:.9;font-weight:900;
+  font-variation-settings:'wdth' 125;letter-spacing:-.02em;text-wrap:balance;
+}
+h1 .yr{color:var(--red)}
+.lede{margin-top:20px;max-width:62ch;font-size:15px;line-height:1.62;color:var(--mute)}
+.lede b{color:var(--bone);font-weight:600}
+
+/* ---------- division switcher ---------- */
+nav.switch{
+  position:sticky;top:0;z-index:20;background:rgba(0,0,0,.93);
+  backdrop-filter:blur(10px);border-block:1px solid var(--line);
+  margin-top:30px;
+}
+.switch-in{max-width:960px;margin:0 auto;padding-inline:20px;display:flex;gap:6px;overflow-x:auto}
+.switch a{
+  flex:0 0 auto;padding:15px 16px;font-size:12px;font-weight:800;letter-spacing:.16em;
+  color:var(--mute);text-decoration:none;border-bottom:3px solid transparent;white-space:nowrap;
+  transition:color .15s,border-color .15s;
+}
+.switch a:hover{color:var(--bone)}
+.switch a[aria-current="true"]{color:var(--bone);border-bottom-color:var(--red)}
+
+/* ---------- division panel ---------- */
+.div-panel{padding-block:56px 8px;scroll-margin-top:60px}
+.div-panel+.div-panel{border-top:1px solid var(--line-soft)}
+.dhead{display:flex;flex-wrap:wrap;align-items:flex-end;gap:14px 22px}
+h2{font-size:clamp(30px,7.5vw,52px);line-height:.94;font-weight:900;
+   font-variation-settings:'wdth' 123;letter-spacing:-.02em;color:var(--red);text-transform:uppercase}
+.dteam{font-size:13px;font-weight:800;letter-spacing:.2em;color:var(--bone);padding-bottom:5px}
+.dmeta{margin-top:14px;font-size:12px;font-weight:700;letter-spacing:.13em;color:var(--mute)}
+.dmeta b{color:var(--gold);font-weight:700}
+
+/* ---------- next up ---------- */
+.nextup{
+  margin-top:26px;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;
+  padding:18px 20px;background:var(--panel);border:1px solid var(--line);
+  border-left:3px solid var(--gold);
+}
+.nextup .when{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.06em;
+  color:var(--gold);text-transform:uppercase;white-space:nowrap}
+.nextup .what{font-size:17px;font-weight:800;font-variation-settings:'wdth' 112;line-height:1.25}
+.nextup .what span{color:var(--mute);font-weight:600}
+.nextup.done{border-left-color:var(--mute-dim)}
+.nextup.done .when{color:var(--mute)}
+
+/* ---------- calendar actions ---------- */
+.acts{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;padding:13px 18px;
+  font-family:var(--disp);font-size:13px;font-weight:800;letter-spacing:.07em;
+  border:1px solid var(--line);background:var(--panel);color:var(--bone);
+  text-decoration:none;cursor:pointer;transition:border-color .15s,background .15s;
+}
+.btn:hover{border-color:var(--mute-dim);background:#111113}
+.btn.primary{background:var(--gold);color:#140E02;border-color:var(--gold)}
+.btn.primary:hover{background:#F3C155;border-color:#F3C155}
+.btn .dot{width:7px;height:7px;border-radius:50%;background:var(--red);flex:0 0 auto}
+.btn.primary .dot{background:#140E02}
+.note{margin-top:12px;font-size:12px;line-height:1.6;color:var(--mute-dim);max-width:62ch}
+.note b{color:var(--mute)}
+
+/* ---------- fixtures ---------- */
+.fixtures{margin-top:26px;border-top:1px solid var(--line)}
+.fx{
+  display:grid;grid-template-columns:106px 92px minmax(0,1fr) 34px 96px 34px;
+  align-items:center;gap:12px;padding:15px 0 15px 14px;
+  border-bottom:1px solid var(--line-soft);position:relative;
+  color:inherit;text-decoration:none;transition:background .14s;
+}
+a.fx:hover{background:#0D0D0F}
+.add{display:flex;justify-content:flex-end}
+.add span{
+  display:flex;align-items:center;justify-content:center;width:26px;height:26px;
+  border:1px solid var(--line);border-radius:50%;color:var(--mute);
+  font-size:15px;font-weight:700;line-height:1;transition:border-color .14s,color .14s,background .14s;
+}
+a.fx:hover .add span{border-color:var(--gold);color:var(--gold);background:rgba(232,178,58,.1)}
+.fx::before{content:"";position:absolute;left:0;top:11px;bottom:11px;width:3px;background:var(--red)}
+.fx.tbc::before{background:#2C2C2E}
+.fx.bye::before{background:#1C1C1E}
+.fx.po::before{background:var(--gold)}
+.fx .rnd{font-size:10.5px;font-weight:800;letter-spacing:.1em;color:var(--mute);white-space:nowrap}
+.fx.po .rnd{color:var(--gold)}
+.fx .dt{display:flex;flex-direction:column;line-height:1.1}
+.fx .dt b{font-size:10px;font-weight:800;letter-spacing:.16em;color:var(--gold)}
+.fx .dt span{font-family:var(--mono);font-size:15px;font-weight:600;color:var(--bone);
+  font-variant-numeric:tabular-nums;white-space:nowrap;margin-top:2px}
+.fx .opp{font-size:19px;font-weight:900;font-variation-settings:'wdth' 112;line-height:1.15;
+  display:flex;align-items:baseline;gap:9px;min-width:0}
+.fx .opp i{font-style:normal;font-size:12px;font-weight:800;color:var(--red);letter-spacing:.06em;flex:0 0 auto}
+.fx .opp u{text-decoration:none;overflow-wrap:anywhere}
+.fx .sub{margin-top:5px;font-size:11px;font-weight:600;letter-spacing:.05em;color:var(--mute-dim)}
+.fx .ha{display:flex;justify-content:center}
+.fx .ha em{font-style:normal;font-size:10px;font-weight:900;padding:4px 7px;border-radius:3px;line-height:1}
+.ha em.h{background:var(--red);color:#fff}
+.ha em.a{background:#161618;color:var(--mute);border:1px solid var(--line)}
+.fx .tm{text-align:right;font-family:var(--mono);font-size:16px;font-weight:600;
+  color:var(--bone);font-variant-numeric:tabular-nums;line-height:1.15}
+.fx .tm span{display:block;margin-top:4px;font-family:var(--disp);font-size:10px;
+  font-weight:700;letter-spacing:.14em;color:var(--mute-dim)}
+.fx.tbc .opp,.fx.bye .opp{color:var(--mute-dim);font-size:16px}
+.fx.tbc .tm,.fx.bye .tm{color:var(--mute-dim);font-size:13px}
+.fx.next{background:linear-gradient(90deg,rgba(232,178,58,.08),transparent 62%)}
+.split{display:flex;align-items:center;gap:14px;margin:20px 0 10px}
+.split span{font-size:10px;font-weight:900;letter-spacing:.34em;color:var(--gold)}
+.split::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--gold-dim),transparent)}
+
+/* ---------- whatsapp block ---------- */
+.share{margin-top:26px;padding:18px 20px;background:var(--panel);border:1px solid var(--line)}
+.share h3{font-size:11px;font-weight:800;letter-spacing:.22em;color:var(--mute)}
+.share pre{
+  margin-top:12px;font-family:var(--mono);font-size:12.5px;line-height:1.75;color:var(--bone);
+  white-space:pre-wrap;overflow-wrap:anywhere;
+}
+.share .btn{margin-top:14px}
+
+/* ---------- footer ---------- */
+footer{margin-top:64px;padding-top:26px;border-top:1px solid var(--line);
+  font-size:12px;line-height:1.7;color:var(--mute-dim)}
+footer b{color:var(--mute)}
+footer a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-dim)}
+
+@media (max-width:640px){
+  .fx{grid-template-columns:minmax(0,1fr) 30px 74px 26px;gap:9px;padding-left:12px;
+      grid-template-areas:"rnd rnd dt dt" "opp ha tm add"}
+  .add{grid-area:add}
+  .fx .rnd{grid-area:rnd}
+  .fx .dt{grid-area:dt;align-items:flex-end}
+  .fx .opp{grid-area:opp}
+  .fx .ha{grid-area:ha}
+  .fx .tm{grid-area:tm}
+  .fx .dt{flex-direction:row;gap:7px;align-items:baseline}
+  .fx .dt span{margin-top:0}
+  .nextup{grid-template-columns:1fr;gap:8px}
+}
+</style>
+
+<div class="rule"></div>
+<div class="wrap head">
+  <header class="top">
+    <div class="club">CONTROLLERS</div>
+    <div class="eyebrow">BALL ABOVE ALL &middot; DUBAI</div>
+    <h1>Season <span class="yr">3</span><br>Fixtures</h1>
+    <p class="lede">Three Controllers teams, three nights a week, all at <b>All Sports Arena, Al Quoz</b>.
+    Subscribe once per squad and the schedule <b>keeps itself current</b> &mdash; when BAA moves a game or names a
+    playoff opponent, it changes in your calendar without anyone re-sending anything.</p>
+  </header>
+</div>
+
+<nav class="switch" aria-label="Divisions">
+  <div class="switch-in" id="switch"></div>
+</nav>
+
+<div class="wrap" id="panels"></div>
+
+<div class="wrap">
+  <footer>
+    <b>Times and courts are BAA's, scraped from their season pages on 13 September 2026.</b><br>
+    Rounds marked TBC depend on final standings &mdash; the evening is blocked in your calendar and fills in
+    once BAA publishes the draw. Source:
+    <a href="https://www.ballaboveallsports.com/PreviewSeasons" target="_blank" rel="noopener">ballaboveallsports.com</a>
+  </footer>
+</div>
+
+<script>
+const VENUE = "All Sports Arena, Al Quoz";
+const MON = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+const DAYS = ["SUN","MON","TUE","WED","THU","FRI","SAT"];
+
+const DIVS = [
+  {key:"elite", label:"MEN ELITE", name:"Elite", team:"CONTROLLERS", day:"Tuesdays", sid:7588, rounds:[
+    {r:"Round 1",date:"2026-09-15",time:"21:00",court:"Crt 1",opp:"Ballers All Star",ha:"A"},
+    {r:"Round 2",date:"2026-09-22",time:"21:00",court:"Crt 2",opp:"Dubai Hoops Elite",ha:"A"},
+    {r:"Round 3",date:"2026-09-29",time:"22:15",court:"Crt 1",opp:"Pure Basketball",ha:"A"},
+    {r:"Round 4",date:"2026-10-06",time:"21:00",court:"Crt 1",opp:"Al Musbah",ha:"H"},
+    {r:"Round 5",date:"2026-10-13",time:"21:00",court:"Crt 1",opp:"TwentyFour Academy",ha:"H"},
+    {r:"Round 6",date:"2026-10-20",note:"1v6 · 2v5 · 3v4",tbc:true},
+    {r:"Semi Finals",date:"2026-10-27",tbc:true,po:true},
+    {r:"Championship",date:"2026-11-03",tbc:true,po:true}
+  ]},
+  {key:"div3", label:"MEN DIV 3", name:"Div 3", team:"CONTROLLERS DXB", day:"Wednesdays", sid:7557, rounds:[
+    {r:"Round 1",date:"2026-09-16",time:"20:15",court:"Crt 1",opp:"Vampires",ha:"A"},
+    {r:"Round 2",date:"2026-09-23",time:"20:15",court:"Crt 1",opp:"Lights Out",ha:"A"},
+    {r:"Round 3",date:"2026-09-30",time:"20:15",court:"Crt 1",opp:"Airball Experts",ha:"A"},
+    {r:"Round 4",date:"2026-10-07",time:"20:15",court:"Crt 1",opp:"Jedis DXB",ha:"H",note:"Pool A · Pool B 1v4 2v3"},
+    {r:"Round 5",date:"2026-10-14",note:"Pool A · Pool B 1v2 3v4",bye:true},
+    {r:"Round 6",date:"2026-10-21",note:"Pool A · no 5th seed",tbc:true},
+    {r:"Round 7",date:"2026-10-28",note:"Pool A vs Pool B",tbc:true},
+    {r:"Elimination",date:"2026-11-04",note:"Top 8",tbc:true,po:true},
+    {r:"Semi Finals",date:"2026-11-11",tbc:true,po:true},
+    {r:"Championship",date:"2026-11-18",tbc:true,po:true}
+  ]},
+  {key:"div4", label:"MEN DIV 4", name:"Div 4", team:"DXB CONTROLLERS", day:"Mondays", sid:7587, rounds:[
+    {r:"Round 1",date:"2026-09-14",time:"21:30",court:"Crt 3",opp:"DXB Ballers",ha:"H"},
+    {r:"Round 2",date:"2026-09-21",time:"20:15",court:"Crt 3",opp:"Proball",ha:"A"},
+    {r:"Round 3",date:"2026-09-28",bye:true},
+    {r:"Round 4",date:"2026-10-05",time:"21:30",court:"Crt 3",opp:"DXB Phoenix",ha:"A"},
+    {r:"Round 5",date:"2026-10-12",time:"20:15",court:"Crt 3",opp:"Bulldogs",ha:"H"},
+    {r:"Round 6",date:"2026-10-19",note:"Pool A v Pool B",tbc:true},
+    {r:"Round 7",date:"2026-10-26",note:"Kriss Kross",tbc:true},
+    {r:"Elimination",date:"2026-11-02",note:"Top 8",tbc:true,po:true},
+    {r:"Semi Finals",date:"2026-11-09",tbc:true,po:true},
+    {r:"Championship",date:"2026-11-16",tbc:true,po:true}
+  ]}
+];
+
+const DIR = location.href.split("#")[0].split("?")[0]
+  .replace(/\/index\.html$/,"").replace(/\/+$/,"");
+
+/* Feeds sit next to this page when it's self-hosted, so the URLs follow the
+   domain automatically. The Claude-hosted copy points at GitHub Pages. */
+const SELF_HOSTED = /(^|\.)github\.io$|(^|\.)controllersbasketball\.com$/.test(location.hostname);
+const FEED_BASE = SELF_HOSTED ? DIR : "https://gityuvs.github.io/controllers-fixtures";
+const feedHttps = k => FEED_BASE ? `${FEED_BASE}/controllers-${k}.ics` : null;
+const feedWebcal = k => feedHttps(k) ? feedHttps(k).replace(/^https?:/,"webcal:") : null;
+
+/* One-tap Google Calendar link, built per game — needs no hosting. */
+const pad = n => String(n).padStart(2,"0");
+const utc = d => `${d.getUTCFullYear()}${pad(d.getUTCMonth()+1)}${pad(d.getUTCDate())}T${pad(d.getUTCHours())}${pad(d.getUTCMinutes())}00Z`;
+function gcal(div, rd){
+  const start = rd.tbc ? new Date(`${rd.date}T20:00:00+04:00`) : parse(rd);
+  const end = new Date(start.getTime() + (rd.tbc ? 150 : 75) * 60000);
+  const home = rd.ha === "H";
+  const title = rd.tbc
+    ? `${div.label}: ${rd.r} — TBC`
+    : `${div.label}: ${home ? "vs" : "@"} ${rd.opp}`;
+  const details = rd.tbc
+    ? `${div.team} · ${rd.r}\nOpponent, tip-off and court depend on standings — evening blocked.`
+    : `${div.team} ${home ? "vs" : "@"} ${rd.opp}\n${rd.r} · ${rd.court} · tip-off ${rd.time}\nBring your ${home ? "HOME" : "AWAY"} kit. On court 20 minutes before tip-off.`;
+  const loc = rd.tbc ? VENUE : `${VENUE} — ${rd.court}`;
+  return "https://calendar.google.com/calendar/render?action=TEMPLATE"
+    + `&text=${encodeURIComponent(title)}`
+    + `&dates=${utc(start)}/${utc(end)}`
+    + `&details=${encodeURIComponent(details)}`
+    + `&location=${encodeURIComponent(loc)}`
+    + "&ctz=Asia/Dubai";
+}
+
+const esc = s => String(s).replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const parse = r => new Date(`${r.date}T${r.time || "20:00"}:00+04:00`);
+
+function fxRow(div, rd, isNext){
+  const d = new Date(rd.date + "T12:00:00+04:00");
+  const day = DAYS[d.getUTCDay()], date = `${String(d.getUTCDate()).padStart(2,"0")} ${MON[d.getUTCMonth()]}`;
+  const cls = ["fx", rd.po ? "po" : "", rd.bye ? "bye" : "", rd.tbc ? "tbc" : "", isNext ? "next" : ""]
+    .filter(Boolean).join(" ");
+  const dt = `<div class="dt"><b>${day}</b><span>${date}</span></div>`;
+  const rn = `<div class="rnd">${esc(rd.r).toUpperCase()}</div>`;
+  const note = rd.note ? `<div class="sub">${esc(rd.note)}</div>` : "";
+
+  if (rd.bye) return `<div class="${cls}">${rn}${dt}
+    <div><div class="opp"><u>Bye week</u></div>
+    <div class="sub">${rd.note ? esc(rd.note) + " · " : ""}No Controllers game</div></div>
+    <div class="ha"></div><div class="tm">&mdash;</div><div class="add"></div></div>`;
+
+  const add = `<div class="add"><span aria-hidden="true">+</span></div>`;
+  const href = gcal(div, rd);
+
+  if (rd.tbc) return `<a class="${cls}" href="${href}" target="_blank" rel="noopener"
+    aria-label="Add ${esc(rd.r)} to calendar">${rn}${dt}
+    <div><div class="opp"><u>TBC</u></div>
+    <div class="sub">${rd.note ? esc(rd.note) + " · " : ""}Set by standings</div></div>
+    <div class="ha"></div><div class="tm">TBC</div>${add}</a>`;
+
+  const home = rd.ha === "H";
+  return `<a class="${cls}" href="${href}" target="_blank" rel="noopener"
+    aria-label="Add ${esc(rd.r)} versus ${esc(rd.opp)} to calendar">${rn}${dt}
+    <div><div class="opp"><i>${home ? "VS" : "@"}</i><u>${esc(rd.opp)}</u></div>${note}</div>
+    <div class="ha"><em class="${home ? "h" : "a"}">${rd.ha}</em></div>
+    <div class="tm">${rd.time}<span>${esc(rd.court).toUpperCase()}</span></div>${add}</a>`;
+}
+
+function nextGame(div){
+  const now = new Date();
+  return div.rounds.find(r => !r.bye && parse(r) > now) || null;
+}
+
+function nextUpHtml(div){
+  const n = nextGame(div);
+  if (!n) return `<div class="nextup done"><div class="when">Season complete</div>
+    <div class="what">No fixtures left on the board.</div></div>`;
+  const d = parse(n);
+  const days = Math.ceil((d - new Date()) / 86400000);
+  const rel = days <= 0 ? "Tonight" : days === 1 ? "Tomorrow" : `In ${days} days`;
+  const when = `${DAYS[new Date(n.date+"T12:00:00+04:00").getUTCDay()]} ${String(d.getDate()).padStart(2,"0")} ${MON[d.getMonth()]} · ${rel}`;
+  const what = n.tbc
+    ? `${esc(n.r)} — <span>opponent and tip-off still to be confirmed</span>`
+    : `${n.ha === "H" ? "vs" : "away to"} <b>${esc(n.opp)}</b> <span>· ${n.time} · ${esc(n.court)} · ${n.ha === "H" ? "home" : "away"} kit</span>`;
+  return `<div class="nextup"><div class="when">Next up · ${when}</div><div class="what">${what}</div></div>`;
+}
+
+function shareText(div){
+  const n = nextGame(div);
+  const first = n && !n.tbc
+    ? `First up: ${n.ha === "H" ? "vs" : "@"} ${n.opp}, ${n.time} on ${n.court}.`
+    : `Next round: ${n ? n.r : "TBC"}.`;
+  return `🏀 CONTROLLERS — BAA Season 3 (${div.label})
+${div.day}, ${VENUE}.
+
+${first}
+
+Full schedule — hit Subscribe and the whole season lands in your calendar:
+${DIR}#${div.key}
+
+Do it once. If BAA moves a game, your calendar fixes itself. Every entry has the court, the tip-off time and which kit to bring.
+
+Open the link in Safari or Chrome — subscribe doesn't work inside WhatsApp's browser.`;
+}
+
+function panelHtml(div){
+  const rows = [];
+  let split = false;
+  const n = nextGame(div);
+  for (const rd of div.rounds){
+    if (rd.po && !split){ rows.push(`<div class="split"><span>PLAYOFFS</span></div>`); split = true; }
+    rows.push(fxRow(div, rd, rd === n));
+  }
+  const gsub = feedHttps(div.key)
+    ? `https://calendar.google.com/calendar/r?cid=${encodeURIComponent(feedHttps(div.key))}` : null;
+  const sub = feedWebcal(div.key)
+    ? `<a class="btn primary" href="${feedWebcal(div.key)}"><span class="dot"></span>Subscribe &mdash; iPhone</a>
+       <a class="btn" href="${gsub}" target="_blank" rel="noopener"><span class="dot"></span>Subscribe &mdash; Google</a>
+       <button class="btn" type="button" data-copy="${feedHttps(div.key)}"><span class="dot"></span>Copy feed link</button>`
+    : "";
+  return `<section class="div-panel" id="${div.key}">
+    <div class="dhead">
+      <h2>${esc(div.name)}</h2>
+      <div class="dteam">${esc(div.team)}</div>
+    </div>
+    <div class="dmeta">${div.day.toUpperCase()} &middot; <b>${VENUE.toUpperCase()}</b></div>
+    ${nextUpHtml(div)}
+    <div class="acts">${sub}
+      <a class="btn${sub ? "" : " primary"}" href="${gcal(div, nextGame(div) || div.rounds[0])}" target="_blank" rel="noopener"><span class="dot"></span>Add the next game</a>
+    </div>
+    <p class="note">Subscribe once and you are done for the season &mdash; when BAA moves a game or names a
+    playoff opponent, it <b>changes in your calendar on its own</b>. Or tap any row below to add just that game.
+    Every entry carries the court, the tip-off and <b>which kit to bring</b>.
+    Open this page in Safari or Chrome; subscribe links don&rsquo;t fire inside WhatsApp&rsquo;s built-in browser.</p>
+    <div class="fixtures">${rows.join("")}</div>
+    <div class="share">
+      <h3>MESSAGE FOR THE ${esc(div.label)} GROUP</h3>
+      <pre id="msg-${div.key}">${esc(shareText(div))}</pre>
+      <button class="btn" type="button" data-copy-el="msg-${div.key}" id="copymsg-${div.key}"><span class="dot"></span>Copy message</button>
+    </div>
+  </section>`;
+}
+
+document.getElementById("panels").innerHTML = DIVS.map(panelHtml).join("");
+document.getElementById("switch").innerHTML = DIVS
+  .map(d => `<a href="#${d.key}" data-k="${d.key}">${d.label}</a>`).join("");
+
+/* copy buttons */
+document.addEventListener("click", async e => {
+  const b = e.target.closest("[data-copy],[data-copy-el]");
+  if (!b) return;
+  const text = b.dataset.copy || document.getElementById(b.dataset.copyEl).textContent;
+  const label = b.lastChild;
+  const was = label.textContent;
+  try {
+    await navigator.clipboard.writeText(text);
+    label.textContent = "Copied";
+  } catch {
+    label.textContent = "Press ⌘C to copy";
+    const r = document.createRange();
+    r.selectNodeContents(b.dataset.copyEl ? document.getElementById(b.dataset.copyEl) : b);
+    getSelection().removeAllRanges(); getSelection().addRange(r);
+  }
+  setTimeout(() => { label.textContent = was; }, 1900);
+});
+
+/* switcher state */
+const links = [...document.querySelectorAll(".switch a")];
+const obs = new IntersectionObserver(es => {
+  es.forEach(en => {
+    if (en.isIntersecting) links.forEach(l =>
+      l.setAttribute("aria-current", String(l.dataset.k === en.target.id)));
+  });
+}, {rootMargin:"-20% 0px -70% 0px"});
+DIVS.forEach(d => obs.observe(document.getElementById(d.key)));
+links[0].setAttribute("aria-current","true");
+</script>
