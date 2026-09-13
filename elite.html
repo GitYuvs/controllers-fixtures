@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Subscribe &middot; Controllers Elite</title>
+<meta name="description" content="Add the Controllers Elite season to your calendar.">
+<style>
+:root{--ink:#000;--panel:#0B0B0C;--line:#1D1D1F;--bone:#F4F2EE;--mute:#83817D;
+--red:#E8232A;--gold:#E8B23A;--sans:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ink);color:var(--bone);font-family:var(--sans);
+min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+padding:32px 20px;text-align:center;-webkit-font-smoothing:antialiased}
+.rule{position:fixed;top:0;left:0;right:0;height:3px;
+background:linear-gradient(90deg,var(--red) 0%,var(--gold) 46%,transparent 100%)}
+.club{font-size:11px;font-weight:800;letter-spacing:.4em;color:var(--mute)}
+h1{margin-top:14px;font-size:clamp(30px,9vw,44px);line-height:1.02;font-weight:900;letter-spacing:-.02em}
+h1 span{color:var(--red)}
+.sub{margin-top:12px;font-size:15px;line-height:1.6;color:var(--mute)}
+.status{margin-top:26px;font-size:13px;color:var(--gold);min-height:18px;font-weight:600}
+.acts{margin-top:18px;display:flex;flex-direction:column;gap:10px;max-width:360px;width:100%;margin-inline:auto}
+a.btn{display:block;padding:16px 18px;border-radius:9px;text-decoration:none;
+font-size:15px;font-weight:800;border:1px solid var(--line);background:var(--panel);color:var(--bone)}
+a.btn.primary{background:var(--gold);color:#140E02;border-color:var(--gold)}
+.foot{margin-top:26px;font-size:12.5px;line-height:1.65;color:#5A5956;max-width:360px;margin-inline:auto}
+.foot a{color:var(--gold)}
+</style></head><body>
+<div class="rule"></div>
+<div class="club">CONTROLLERS</div>
+<h1>Elite<br><span>Season 3</span></h1>
+<p class="sub">CONTROLLERS &middot; Tuesdays at All Sports Arena.<br>
+Subscribe once &mdash; if BAA moves a game, your calendar fixes itself.</p>
+<p class="status" id="s">Opening your calendar&hellip;</p>
+<div class="acts">
+  <a class="btn primary" href="webcal://fixtures.controllersbasketball.com/controllers-elite.ics">Add to iPhone Calendar</a>
+  <a class="btn" target="_blank" rel="noopener"
+     href="https://calendar.google.com/calendar/r?cid=https%3A%2F%2Ffixtures.controllersbasketball.com%2Fcontrollers-elite.ics">Add to Google Calendar</a>
+  <a class="btn" href="https://fixtures.controllersbasketball.com/#elite">See the full schedule</a>
+</div>
+<p class="foot">Nothing happened? You are probably inside WhatsApp&rsquo;s browser &mdash;
+open this in Safari or Chrome. Or <a href="https://fixtures.controllersbasketball.com/controllers-elite.ics">download the file</a> instead.</p>
+<script>
+setTimeout(function(){
+  try{ window.location.href = "webcal://fixtures.controllersbasketball.com/controllers-elite.ics"; }catch(e){}
+  setTimeout(function(){ document.getElementById("s").textContent = "Didn't open? Tap a button below."; },2500);
+},350);
+</script>
+</body></html>
