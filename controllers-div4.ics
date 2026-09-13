@@ -1,0 +1,203 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Controllers Basketball//BAA Season 3//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Controllers Men Div 4 — BAA S3
+X-WR-TIMEZONE:Asia/Dubai
+X-WR-CALDESC:DXB CONTROLLERS · Ball Above All Season 3 · Mondays at All
+  Sports Arena\, Al Quoz\, Dubai
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Asia/Dubai
+X-LIC-LOCATION:Asia/Dubai
+BEGIN:STANDARD
+TZOFFSETFROM:+0400
+TZOFFSETTO:+0400
+TZNAME:+04
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:controllers-baa-s3-div4-round-1@controllersbasketball.com
+DTSTAMP:20260913T125525Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Dubai:20260914T213000
+DTEND;TZID=Asia/Dubai:20260914T224500
+SUMMARY:Men Div 4: vs DXB Ballers (Crt 3)
+LOCATION:All Sports Arena\, Al Quoz\, Dubai — Crt 3
+DESCRIPTION:DXB CONTROLLERS vs DXB Ballers\nRound 1 · Crt 3 · tip-off 2
+ 1:30\nBring your HOME kit.\nBe on court 20 minutes before tip-off.\n\nFu
+ ll schedule: https://www.ballaboveallsports.com/PreviewSeasonGames?SID=7
+ 587
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Men Div 4: vs DXB Ballers (Crt 3)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:controllers-baa-s3-div4-round-2@controllersbasketball.com
+DTSTAMP:20260913T125525Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Dubai:20260921T201500
+DTEND;TZID=Asia/Dubai:20260921T213000
+SUMMARY:Men Div 4: @ Proball (Crt 3)
+LOCATION:All Sports Arena\, Al Quoz\, Dubai — Crt 3
+DESCRIPTION:DXB CONTROLLERS @ Proball\nRound 2 · Crt 3 · tip-off 20:15\
+ nBring your AWAY kit.\nBe on court 20 minutes before tip-off.\n\nFull sc
+ hedule: https://www.ballaboveallsports.com/PreviewSeasonGames?SID=7587
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Men Div 4: @ Proball (Crt 3)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:controllers-baa-s3-div4-round-4@controllersbasketball.com
+DTSTAMP:20260913T125525Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Dubai:20261005T213000
+DTEND;TZID=Asia/Dubai:20261005T224500
+SUMMARY:Men Div 4: @ DXB Phoenix (Crt 3)
+LOCATION:All Sports Arena\, Al Quoz\, Dubai — Crt 3
+DESCRIPTION:DXB CONTROLLERS @ DXB Phoenix\nRound 4 · Crt 3 · tip-off 21
+ :30\nBring your AWAY kit.\nBe on court 20 minutes before tip-off.\n\nFul
+ l schedule: https://www.ballaboveallsports.com/PreviewSeasonGames?SID=75
+ 87
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Men Div 4: @ DXB Phoenix (Crt 3)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:controllers-baa-s3-div4-round-5@controllersbasketball.com
+DTSTAMP:20260913T125525Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Dubai:20261012T201500
+DTEND;TZID=Asia/Dubai:20261012T213000
+SUMMARY:Men Div 4: vs Bulldogs (Crt 3)
+LOCATION:All Sports Arena\, Al Quoz\, Dubai — Crt 3
+DESCRIPTION:DXB CONTROLLERS vs Bulldogs\nRound 5 · Crt 3 · tip-off 20:1
+ 5\nBring your HOME kit.\nBe on court 20 minutes before tip-off.\n\nFull 
+ schedule: https://www.ballaboveallsports.com/PreviewSeasonGames?SID=7587
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Men Div 4: vs Bulldogs (Crt 3)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:controllers-baa-s3-div4-round-6@controllersbasketball.com
+DTSTAMP:20260913T125525Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Dubai:20261019T200000
+DTEND;TZID=Asia/Dubai:20261019T223000
+SUMMARY:Men Div 4: Round 6 — TBC
+LOCATION:All Sports Arena\, Al Quoz\, Dubai
+DESCRIPTION:DXB CONTROLLERS · Round 6\nOpponent\, tip-off time and court
+  are not published yet — they depend on standings/seeding.\nBlock the 
+ evening. This entry updates itself once BAA confirms.\nFormat: Pool A v 
+ Pool B\n\nFull schedule: https://www.ballaboveallsports.com/PreviewSeaso
+ nGames?SID=7587
+STATUS:TENTATIVE
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Men Div 4: Round 6 — TBC
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:controllers-baa-s3-div4-round-7@controllersbasketball.com
+DTSTAMP:20260913T125525Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Dubai:20261026T200000
+DTEND;TZID=Asia/Dubai:20261026T223000
+SUMMARY:Men Div 4: Round 7 — TBC
+LOCATION:All Sports Arena\, Al Quoz\, Dubai
+DESCRIPTION:DXB CONTROLLERS · Round 7\nOpponent\, tip-off time and court
+  are not published yet — they depend on standings/seeding.\nBlock the 
+ evening. This entry updates itself once BAA confirms.\nFormat: Kriss Kro
+ ss\n\nFull schedule: https://www.ballaboveallsports.com/PreviewSeasonGam
+ es?SID=7587
+STATUS:TENTATIVE
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Men Div 4: Round 7 — TBC
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:controllers-baa-s3-div4-elimination@controllersbasketball.com
+DTSTAMP:20260913T125525Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Dubai:20261102T200000
+DTEND;TZID=Asia/Dubai:20261102T223000
+SUMMARY:Men Div 4: Elimination — TBC
+LOCATION:All Sports Arena\, Al Quoz\, Dubai
+DESCRIPTION:DXB CONTROLLERS · Elimination\nOpponent\, tip-off time and c
+ ourt are not published yet — they depend on standings/seeding.\nBlock 
+ the evening. This entry updates itself once BAA confirms.\nFormat: Top 8
+ \n\nFull schedule: https://www.ballaboveallsports.com/PreviewSeasonGames
+ ?SID=7587
+STATUS:TENTATIVE
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Men Div 4: Elimination — TBC
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:controllers-baa-s3-div4-semi-finals@controllersbasketball.com
+DTSTAMP:20260913T125525Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Dubai:20261109T200000
+DTEND;TZID=Asia/Dubai:20261109T223000
+SUMMARY:Men Div 4: Semi Finals — TBC
+LOCATION:All Sports Arena\, Al Quoz\, Dubai
+DESCRIPTION:DXB CONTROLLERS · Semi Finals\nOpponent\, tip-off time and c
+ ourt are not published yet — they depend on standings/seeding.\nBlock 
+ the evening. This entry updates itself once BAA confirms.\n\nFull schedu
+ le: https://www.ballaboveallsports.com/PreviewSeasonGames?SID=7587
+STATUS:TENTATIVE
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Men Div 4: Semi Finals — TBC
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:controllers-baa-s3-div4-championship@controllersbasketball.com
+DTSTAMP:20260913T125525Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Dubai:20261116T200000
+DTEND;TZID=Asia/Dubai:20261116T223000
+SUMMARY:Men Div 4: Championship — TBC
+LOCATION:All Sports Arena\, Al Quoz\, Dubai
+DESCRIPTION:DXB CONTROLLERS · Championship\nOpponent\, tip-off time and 
+ court are not published yet — they depend on standings/seeding.\nBlock
+  the evening. This entry updates itself once BAA confirms.\n\nFull sched
+ ule: https://www.ballaboveallsports.com/PreviewSeasonGames?SID=7587
+STATUS:TENTATIVE
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Men Div 4: Championship — TBC
+END:VALARM
+END:VEVENT
+END:VCALENDAR
