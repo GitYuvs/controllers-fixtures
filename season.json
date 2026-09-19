@@ -1,0 +1,362 @@
+{
+  "meta": {
+    "season": "BAA Season 3",
+    "club": "Controllers",
+    "venue": "All Sports Arena, Al Quoz",
+    "updated": "2026-09-19",
+    "source": "ballaboveallsports.com",
+    "sids": {
+      "elite": 7588,
+      "div3": 7557,
+      "div4": 7587
+    },
+    "note": "kit: RED = home, BLACK = away. Every fixture is 'vs' - one venue, no travel."
+  },
+  "elite": [
+    {
+      "round": "Round 1",
+      "date": "2026-09-15",
+      "time": "21:00",
+      "court": "Crt 1",
+      "opponent": "BLR LGE All Stars",
+      "kit": "BLACK",
+      "status": "final",
+      "ourScore": "79",
+      "oppScore": "99",
+      "potg": null
+    },
+    {
+      "round": "Round 2",
+      "date": "2026-09-22",
+      "time": "21:00",
+      "court": "Crt 2",
+      "opponent": "Dubai Hoops Elite",
+      "kit": "BLACK",
+      "status": "scheduled",
+      "ourScore": "",
+      "oppScore": "",
+      "potg": null
+    },
+    {
+      "round": "Round 3",
+      "date": "2026-09-29",
+      "time": "22:15",
+      "court": "Crt 1",
+      "opponent": "Pure Basketball Elite",
+      "kit": "BLACK",
+      "status": "scheduled",
+      "ourScore": "",
+      "oppScore": "",
+      "potg": null
+    },
+    {
+      "round": "Round 4",
+      "date": "2026-10-06",
+      "time": "21:00",
+      "court": "Crt 1",
+      "opponent": "Al Musbah",
+      "kit": "RED",
+      "status": "scheduled",
+      "ourScore": "",
+      "oppScore": "",
+      "potg": null
+    },
+    {
+      "round": "Round 5",
+      "date": "2026-10-13",
+      "time": "21:00",
+      "court": "Crt 1",
+      "opponent": "TwentyFour Academy",
+      "kit": "RED",
+      "status": "scheduled",
+      "ourScore": "",
+      "oppScore": "",
+      "potg": null
+    },
+    {
+      "round": "Round 6",
+      "date": "2026-10-20",
+      "time": "",
+      "court": "",
+      "opponent": "",
+      "kit": "",
+      "status": "tbc",
+      "ourScore": "",
+      "oppScore": "",
+      "potg": null
+    },
+    {
+      "round": "Semi Finals",
+      "date": "2026-10-27",
+      "time": "",
+      "court": "",
+      "opponent": "",
+      "kit": "",
+      "status": "tbc",
+      "ourScore": "",
+      "oppScore": "",
+      "potg": null
+    },
+    {
+      "round": "Championship",
+      "date": "2026-11-03",
+      "time": "",
+      "court": "",
+      "opponent": "",
+      "kit": "",
+      "status": "tbc",
+      "ourScore": "",
+      "oppScore": "",
+      "potg": null
+    }
+  ],
+  "div3": [
+    {
+      "round": "Round 1",
+      "date": "2026-09-16",
+      "time": "20:15",
+      "court": "Crt 1",
+      "opponent": "Vampires",
+      "kit": "BLACK",
+      "status": "final",
+      "ourScore": "68",
+      "oppScore": "55",
+      "potg": null
+    },
+    {
+      "round": "Round 2",
+      "date": "2026-09-23",
+      "time": "20:15",
+      "court": "Crt 1",
+      "opponent": "Lights Out",
+      "kit": "BLACK",
+      "status": "scheduled",
+      "ourScore": "",
+      "oppScore": "",
+      "potg": null
+    },
+    {
+      "round": "Round 3",
+      "date": "2026-09-30",
+      "time": "20:15",
+      "court": "Crt 1",
+      "opponent": "Airball Experts",
+      "kit": "BLACK",
+      "status": "scheduled",
+      "ourScore": "",
+      "oppScore": "",
+      "potg": null
+    },
+    {
+      "round": "Round 4",
+      "date": "2026-10-07",
+      "time": "20:15",
+      "court": "Crt 1",
+      "opponent": "Jedis DXB",
+      "kit": "RED",
+      "status": "scheduled",
+      "ourScore": "",
+      "oppScore": "",
+      "potg": null
+    },
+    {
+      "round": "Round 5",
+      "date": "2026-10-14",
+      "time": "",
+      "court": "",
+      "opponent": "",
+      "kit": "",
+      "status": "bye",
+      "ourScore": "",
+      "oppScore": "",
+      "potg": null
+    },
+    {
+      "round": "Round 6",
+      "date": "2026-10-21",
+      "time": "",
+      "court": "",
+      "opponent": "",
+      "kit": "",
+      "status": "tbc",
+      "ourScore": "",
+      "oppScore": "",
+      "potg": null
+    },
+    {
+      "round": "Round 7",
+      "date": "2026-10-28",
+      "time": "",
+      "court": "",
+      "opponent": "",
+      "kit": "",
+      "status": "tbc",
+      "ourScore": "",
+      "oppScore": "",
+      "potg": null
+    },
+    {
+      "round": "Elimination",
+      "date": "2026-11-04",
+      "time": "",
+      "court": "",
+      "opponent": "",
+      "kit": "",
+      "status": "tbc",
+      "ourScore": "",
+      "oppScore": "",
+      "potg": null
+    },
+    {
+      "round": "Semi Finals",
+      "date": "2026-11-11",
+      "time": "",
+      "court": "",
+      "opponent": "",
+      "kit": "",
+      "status": "tbc",
+      "ourScore": "",
+      "oppScore": "",
+      "potg": null
+    },
+    {
+      "round": "Championship",
+      "date": "2026-11-18",
+      "time": "",
+      "court": "",
+      "opponent": "",
+      "kit": "",
+      "status": "tbc",
+      "ourScore": "",
+      "oppScore": "",
+      "potg": null
+    }
+  ],
+  "div4": [
+    {
+      "round": "Round 1",
+      "date": "2026-09-14",
+      "time": "21:30",
+      "court": "Crt 3",
+      "opponent": "DXB Ballers",
+      "kit": "RED",
+      "status": "final",
+      "ourScore": "27",
+      "oppScore": "62",
+      "potg": null
+    },
+    {
+      "round": "Round 2",
+      "date": "2026-09-21",
+      "time": "20:15",
+      "court": "Crt 3",
+      "opponent": "Proball",
+      "kit": "BLACK",
+      "status": "scheduled",
+      "ourScore": "",
+      "oppScore": "",
+      "potg": null
+    },
+    {
+      "round": "Round 3",
+      "date": "2026-09-28",
+      "time": "",
+      "court": "",
+      "opponent": "",
+      "kit": "",
+      "status": "bye",
+      "ourScore": "",
+      "oppScore": "",
+      "potg": null
+    },
+    {
+      "round": "Round 4",
+      "date": "2026-10-05",
+      "time": "21:30",
+      "court": "Crt 3",
+      "opponent": "DXB Phoenix",
+      "kit": "BLACK",
+      "status": "scheduled",
+      "ourScore": "",
+      "oppScore": "",
+      "potg": null
+    },
+    {
+      "round": "Round 5",
+      "date": "2026-10-12",
+      "time": "20:15",
+      "court": "Crt 3",
+      "opponent": "Bulldogs",
+      "kit": "RED",
+      "status": "scheduled",
+      "ourScore": "",
+      "oppScore": "",
+      "potg": null
+    },
+    {
+      "round": "Round 6",
+      "date": "2026-10-19",
+      "time": "",
+      "court": "",
+      "opponent": "",
+      "kit": "",
+      "status": "tbc",
+      "ourScore": "",
+      "oppScore": "",
+      "potg": null
+    },
+    {
+      "round": "Round 7",
+      "date": "2026-10-26",
+      "time": "",
+      "court": "",
+      "opponent": "",
+      "kit": "",
+      "status": "tbc",
+      "ourScore": "",
+      "oppScore": "",
+      "potg": null
+    },
+    {
+      "round": "Elimination",
+      "date": "2026-11-02",
+      "time": "",
+      "court": "",
+      "opponent": "",
+      "kit": "",
+      "status": "tbc",
+      "ourScore": "",
+      "oppScore": "",
+      "potg": null
+    },
+    {
+      "round": "Semi Finals",
+      "date": "2026-11-09",
+      "time": "",
+      "court": "",
+      "opponent": "",
+      "kit": "",
+      "status": "tbc",
+      "ourScore": "",
+      "oppScore": "",
+      "potg": null
+    },
+    {
+      "round": "Championship",
+      "date": "2026-11-16",
+      "time": "",
+      "court": "",
+      "opponent": "",
+      "kit": "",
+      "status": "tbc",
+      "ourScore": "",
+      "oppScore": "",
+      "potg": null
+    }
+  ],
+  "standings": {
+    "elite": [],
+    "div3": [],
+    "div4": []
+  }
+}
